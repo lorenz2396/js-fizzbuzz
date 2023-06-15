@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#fizzbuzz-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fizzbuzz-container > *{
+    width: 10%;
+    height: 100px;
+    margin: 10px 10px;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 100px;
+}
+
+.square{
+    background-color: darkblue;
+    color: white;
+}
+
+.square.fizz{
+    background-color: lightcoral;
+    color: black;
+}
+
+.square.buzz{
+    background-color: aquamarine;
+    color: black;
+}
+
+.square.fizzbuzz{
+    background-color: yellowgreen;
+    color: black;
+}

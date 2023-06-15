@@ -1,26 +1,34 @@
+const fizzBuzzContainer = document.getElementById('fizzbuzz-container');
 
-const ul = document.createElement('ul');
-document.body.appendChild(ul);
+for (let i = 1; i <= 100; i++) {
 
+    let content = i;
 
-for (let numero = 1; numero <= 100; numero++) {
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('square');
 
-    if (numero % 5 == 0 && numero % 3 == 0) {
-        console.log('FizzBuzz');
+    if (i % 5 == 0 && i % 3 == 0) {
+        console.log('FizzBuzz', i);
+        content = 'FizzBuzz'
+        newDiv.classList.add('FizzBuzz')
     }
-    else if (numero % 3 == 0) {
-        console.log('Fizz');
+    else if (i % 3 == 0) {
+        console.log('Fizz', i);
+        content = 'Fizz'
+        newDiv.classList.add('fizz')
     }
     
-    else if (numero % 5 == 0) {
-        console.log('Buzz');
+    else if (i % 5 == 0) {
+        console.log('Buzz', i);
+        content = 'Buzz'
+        newDiv.classList.add('buzz')
     }
     else {
-        console.log(numero);
+        console.log(content);
     }
 
+
+    newDiv.append(content);
+    fizzBuzzContainer.append(newDiv);
     
-    const newLi = document.createElement('li');
-    newLi.innerHTML = numero;
-    ul.append(newLi);
 }
